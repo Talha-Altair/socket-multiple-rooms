@@ -19,7 +19,7 @@
     <div class="container mt-5 mb-5">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                Errorum Nanum
+                Tact Info - 1
             </div>
             <div class="card-body">
                 <div class="container">
@@ -38,7 +38,7 @@
                 console.log('Client Connected')
             });
 
-        socket.on('room', function(msg) {
+        socket.on('room1', function(msg) {
             // socket.join('room1');
             console.log(msg);
             document.getElementById("text").innerHTML = msg.message;

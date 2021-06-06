@@ -28,17 +28,24 @@ def message(json, methods=['GET']):
 
 @socketio.on('room')
 def room(json, methods=['GET']):
-    print("dummy")
-    print(json)
+    # print("dummy")
+    # print(json)
     room_num = json['room_name']
-    print(room_num)
+    # print(room_num)
     if (room_num == '1'):
-        socketio.emit('room', json)
+        socketio.emit('room1', json)
     elif (room_num == '2'):
         socketio.emit('room2', json)
+    elif (room_num == '3'):
+        socketio.emit('room3', json)
+    elif (room_num == '4'):
+        socketio.emit('room4', json)
+    elif (room_num == '5'):
+        socketio.emit('room5', json)
+    elif (room_num == '6'):
+        socketio.emit('room6', json)
     else:
         print("error")
-
 
 
 if __name__ == '__main__':

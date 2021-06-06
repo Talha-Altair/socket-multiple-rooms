@@ -19,7 +19,7 @@
     <div class="container mt-5 mb-5">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                Tact Info - 2
+                Tact Info - 6
             </div>
             <div class="card-body">
                 <div class="container">
@@ -38,9 +38,12 @@
                 console.log('Client Connected')
             });
 
-        socket.on('room2', function(msg) {
+        socket.on('room6', function(msg) {
+            // socket.join('room1');
             console.log(msg);
             document.getElementById("text").innerHTML = msg.message;
+            // io.to('room1').emit('some event');
+
         })
     </script>
 </body>

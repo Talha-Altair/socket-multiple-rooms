@@ -29,6 +29,34 @@
             <button class="btn btn-primary">Send Message</button>
         </div>
     </form>
+    <form method="POST" id="room3_form" >
+        <div class="container">
+            <label for="text_message" class="form-label mt-5">Room 3!</label>
+            <textarea id="room3" class="form-control mb-3 mt-2" type="text" rows="5"></textarea>
+            <button class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
+    <form method="POST" id="room4_form" >
+        <div class="container">
+            <label for="text_message" class="form-label mt-5">Room 4!</label>
+            <textarea id="room4" class="form-control mb-3 mt-2" type="text" rows="5"></textarea>
+            <button class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
+    <form method="POST" id="room5_form" >
+        <div class="container">
+            <label for="text_message" class="form-label mt-5">Room 5!</label>
+            <textarea id="room5" class="form-control mb-3 mt-2" type="text" rows="5"></textarea>
+            <button class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
+    <form method="POST" id="room6_form" >
+        <div class="container">
+            <label for="text_message" class="form-label mt-5">Room 6!</label>
+            <textarea id="room6" class="form-control mb-3 mt-2" type="text" rows="5"></textarea>
+            <button class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
     
     </div>
     <script>
@@ -54,6 +82,42 @@
             event.preventDefault();
             socket.emit('room', {
                 room_name:      '2',
+                message:        text
+            })    
+        })
+        $('form#room3_form').on('submit', function(event) {
+            text = document.getElementById("room3").value;
+            console.log(text);
+            event.preventDefault();
+            socket.emit('room', {
+                room_name:      '3',
+                message:        text
+            })    
+        })
+        $('form#room4_form').on('submit', function(event) {
+            text = document.getElementById("room4").value;
+            console.log(text);
+            event.preventDefault();
+            socket.emit('room', {
+                room_name:      '4',
+                message:        text
+            })    
+        })
+        $('form#room5_form').on('submit', function(event) {
+            text = document.getElementById("room5").value;
+            console.log(text);
+            event.preventDefault();
+            socket.emit('room', {
+                room_name:      '5',
+                message:        text
+            })    
+        })
+        $('form#room6_form').on('submit', function(event) {
+            text = document.getElementById("room6").value;
+            console.log(text);
+            event.preventDefault();
+            socket.emit('room', {
+                room_name:      '6',
                 message:        text
             })    
         })
